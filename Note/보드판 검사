@@ -1,0 +1,15 @@
+       for i in range(8):
+            for j in range(8):
+                current = board[row + i][col + j] #현재 위치
+                if (i + j) % 2 == 0:  # 짝수 칸
+                    if current != 'W': # w 시작 보드는 짝수칸이 w, w가 아니면 w error count 1 증가
+                        w_count += 1
+                    if current != 'B':# b 시작 보드는 짝수칸이 b, b가 아니면 b error count 1 증가
+                        b_count += 1
+                else:  # 홀수 칸
+                    if current != 'B':# w 시작 보드는 홀수칸이 b, b가 아니면 w error count 1 증가
+                        w_count += 1
+                    if current != 'W':# b 시작 보드는 홀수칸이 w, w가 아니면 b error count 1 증가
+                        b_count += 1
+
+8 * 8 보드 생성후 각 칸마다 bruteForce로 검사. 4중 for문이지만 입출력이 작아 bruteForce 가능.

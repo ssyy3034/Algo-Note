@@ -1,0 +1,3 @@
+SET
+word_list = set(input().strip() for _ in range(words))
+입력 한번에 for문으로 받으면서 set(집합)으로 중복 제거.

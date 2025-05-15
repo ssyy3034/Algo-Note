@@ -1,0 +1,8 @@
+SORTED
+S = list(map(int, input().split()))
+
+if S == sorted(S):
+    print("ascending")
+
+sorted_word_list = sorted(word_list, key=lambda x: (len(x),x))
+sorted는 그냥 정렬하면 사전순 정렬, key로 함수를 주면 함수의 출력값을 키로 사용하여 정렬.
